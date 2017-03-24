@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0037)http://www.network-box.com.hk/zh-hant -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-hant" lang="zh-hant" dir="ltr" class="js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="http://www.network-box.com.hk/sites/default/files/favicon.ico" type="image/x-icon">
+<title>NETWORK BOX | Network Box Provides Comprehensive and Effective Managed Internet Security</title>
+<link type="text/css" rel="stylesheet" media="all" href="css/css_a4868cfd9dfd7fee00104318301056c5.css">
+<link href="css/style1.css" rel="stylesheet" type="text/css" />
+<script src="js/hm.js.下载"></script><script type="text/javascript" async="" src="js/ga.js.下载"></script><script type="text/javascript" src="js/js_9fb1de94b24f2790afd82f7ad5e10f15.js.下载"></script>
+<script type="text/javascript">
+function miaovAddEvent(oEle, sEventName, fnHandler){
+	if(oEle.attachEvent)
+	{
+		oEle.attachEvent('on'+sEventName, fnHandler);
+	}
+	else
+	{
+		oEle.addEventListener(sEventName, fnHandler, false);
+	}
+}
+
+window.onload = function(){
+    var oDiv = document.getElementById('miaov_float_layer');
+    var oBtnMin = document.getElementById('btn_min');
+    var oBtnClose = document.getElementById('btn_close');
+    var oDivContent = oDiv.getElementsByTagName('div')[0];
+
+    var iMaxHeight = 0;
+
+    var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+    oDiv.style.display = 'block';
+    iMaxHeight = oDivContent.offsetHeight;
+
+    if (isIE6) {
+        oDiv.style.position = 'absolute';
+        repositionAbsolute();
+        miaovAddEvent(window, 'scroll', repositionAbsolute);
+        miaovAddEvent(window, 'resize', repositionAbsolute);
+    }
+    else {
+        oDiv.style.position = 'fixed';
+        repositionFixed();
+        miaovAddEvent(window, 'resize', repositionFixed);
+    }
+
+    oBtnMin.timer = null;
+    oBtnMin.isMax = true;
+    oBtnMin.onclick = function() {
+        startMove(
+			oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+			function() {
+			    oBtnMin.className = oBtnMin.className == 'min' ? 'max' : 'min';
+			}
+		);
+    };
+
+    oBtnClose.onclick = function() {
+        oDiv.style.display = 'none';
+        oDiv.innerHTML = "";
+    };
+};
+
+function startMove(obj, iTarget, fnCallBackEnd){
+	if(obj.timer)
+	{
+		clearInterval(obj.timer);
+	}
+	obj.timer=setInterval
+	(
+		function ()
+		{
+			doMove(obj, iTarget, fnCallBackEnd);
+		},30
+	);
+}
+
+function doMove(obj, iTarget, fnCallBackEnd){
+	var iSpeed=(iTarget-obj.offsetHeight)/8;
+	
+	if(obj.offsetHeight==iTarget)
+	{
+		clearInterval(obj.timer);
+		obj.timer=null;
+		if(fnCallBackEnd)
+		{
+			fnCallBackEnd();
+		}
+	}
+	else
+	{
+		iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+		obj.style.height=obj.offsetHeight+iSpeed+'px';
+		
+		((window.navigator.userAgent.match(/MSIE 6/ig) && window.navigator.userAgent.match(/MSIE 6/ig).length==2)?repositionAbsolute:repositionFixed)()
+	}
+}
+
+function repositionAbsolute(){
+	var oDiv=document.getElementById('miaov_float_layer');
+	var left=document.body.scrollLeft||document.documentElement.scrollLeft;
+	var top=document.body.scrollTop||document.documentElement.scrollTop;
+	var width=document.documentElement.clientWidth;
+	var height=document.documentElement.clientHeight;
+	
+	oDiv.style.left=left+width-oDiv.offsetWidth+'px';
+	oDiv.style.top=top+height-oDiv.offsetHeight+'px';
+}
+
+function repositionFixed(){
+	var oDiv=document.getElementById('miaov_float_layer');
+	var width=document.documentElement.clientWidth;
+	var height=document.documentElement.clientHeight;
+	
+	oDiv.style.left=width-oDiv.offsetWidth+'px';
+	oDiv.style.top=height-oDiv.offsetHeight+'px';
+}
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" }, "nice_menus_options": { "delay": "800", "speed": "1" }, "spamspan": { "m": "spamspan", "u": "u", "d": "d", "h": "h", "t": "t" } });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+				 $(function() { 
+					$("#billy_scroller").billy({slidePause:20000});
+					$("#scroll_panel").hover(function() {
+						  $("#links").animate({opacity: "show", button: "0"}, "fast");
+							}, function() {
+								 $("#links").animate({opacity: "hide", button: "0"}, "fast");
+				
+					});
+				});	
+			
+			
+			
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+$(function(){
+ $("#alert").nbAlertLevel(); 	
+});
+
+//--><!]]>
+</script>
+<!--[if lt IE 7]>
+      <link type="text/css" rel="stylesheet" media="all" href="/themes/networkbox/fix-ie.css" />    <![endif]-->
+
+<script src="js/swfobject_modified.js.下载" type="text/javascript"></script>
+<script src="js/swfobject_modified.js(1).下载" type="text/javascript"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!--<meta name="viewport" content="minimun-scale=0.32, maximum-scale=3.0 ,initial-scale=0.9 ,user-scalable=yes" /> -->
+
+</head>
+<body rlt="1">
+<!--left side bar--> 
+<!--left side bar-->
+<div id="container">
+  <div id="header">
+    <div id="logo-floater">
+      <h1><a href="index.htm" title="NETWORK BOX"><img src="images/logo.jpg" alt="NETWORK BOX" id="logo"></a></h1>
+    </div>
+    <div id="header-nav">
+      <div id="block-menu-secondary-links" class="clear-block block block-menu">
+        <div class="content">
+          <ul class="menu">
+            <li class="leaf first"><a href="index.htm" title="" class="active">　主頁　</a></li>
+            <li class="leaf"><a href="http://www.network-box.com.hk/zh-hant/resource-centre" title="">　資源中心　</a></li>
+            <li class="leaf"><a href="http://response.network-box.com/" title="">　網絡安全回應　</a></li>
+            <li class="leaf last"><a href="http://www.network-box.com.hk/zh-hant/contact-network-box" title="">　聯絡我們　</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="block-search-0" class="clear-block block block-search">
+        <div class="content">
+          <form action="http://www.network-box.com.hk/zh-hant" accept-charset="UTF-8" method="post" id="search-block-form">
+            <div>
+              <div class="container-inline">
+                <div class="form-item" id="edit-search-block-form-1-wrapper">
+                  <label for="edit-search-block-form-1">搜尋本站: </label>
+                  <input type="text" maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15" value="" title="輸入你想要搜尋的關鍵字。" class="form-text">
+                </div>
+                <input type="submit" name="op" id="edit-submit" value="搜尋" class="form-submit">
+                <input type="hidden" name="form_build_id" id="form-c5b9a2785513729f719049769f7e1e6c" value="form-c5b9a2785513729f719049769f7e1e6c">
+                <input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="block-locale-0" class="clear-block block block-locale">
+        <div class="content">
+          <ul>
+            <li class="zh-hant first active"><a href="http://www.network-box.com.hk/zh-hant" class="language-link active">中文</a></li>
+            <li class="en last"><a href="http://www.network-box.com.hk/" class="language-link">ENG</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="block-block-55" class="clear-block block block-block">
+        <div class="content">
+          <p> <a href="http://www.network-box.com.hk/zh-hant/login">登入</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="nav">
+    <div id="block-nice_menus-1" class="clear-block block block-nice_menus">
+      <div class="content">
+        <ul class="nice-menu nice-menu-down sf-js-enabled" id="nice-menu-1">
+          <li class="menu-1918 menuparent menu-path-node-91 first odd "><a href="http://www.network-box.com.hk/zh-hant/unified-threat-management" title="">解決方案</a>
+            <ul style="visibility: hidden; display: none;">
+              <li class="menu-1920 menuparent menu-path-node-91 first odd "><a href="http://www.network-box.com.hk/zh-hant/unified-threat-management" title="">統一威脅管理(UTM+)</a>
+                <ul style="visibility: hidden; display: none;">
+                  <li class="menu-4152 menuparent menu-path-node-468 first odd "><a href="http://www.network-box.com.hk/zh-hant/f-scan" title="">F-Scan</a>
+                    <ul style="visibility: hidden; display: none;">
+                      <li class="menu-4202 menu-path-node-468 first  odd "><a href="http://www.network-box.com.hk/zh-hant/f-scan" title="f-scan 概覽">概覽</a></li>
+                      <li class="menu-1923 menu-path-node-94 even "><a href="http://www.network-box.com.hk/zh-hant/firewall" title="">防火牆</a></li>
+                      <li class="menu-1935 menu-path-node-97 odd "><a href="http://www.network-box.com.hk/zh-hant/vpn" title="">VPN</a></li>
+                      <li class="menu-1934 menu-path-node-96 even  last "><a href="http://www.network-box.com.hk/zh-hant/idp" title="">IDP</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-4115 menuparent menu-path-node-472 even "><a href="http://www.network-box.com.hk/zh-hant/z-scan" title="">Z-Scan</a>
+                    <ul style="visibility: hidden; display: none;">
+                      <li class="menu-4211 menu-path-node-472 first  odd  last "><a href="http://www.network-box.com.hk/zh-hant/z-scan" title="防零日病毒">防零日病毒</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-1922 menuparent menu-path-node-93 odd "><a href="http://www.network-box.com.hk/zh-hant/anti-virus" title="">M-Scan 防病毒</a>
+                    <ul style="visibility: hidden; display: none;">
+                      <li class="menu-4218 menu-path-node-93 first  odd  last "><a href="http://www.network-box.com.hk/zh-hant/anti-virus" title="">三重防病毒</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-1921 menuparent menu-path-node-92 even "><a href="http://www.network-box.com.hk/zh-hant/spam-block" title="">防垃圾郵件</a>
+                    <ul style="visibility: hidden; display: none;">
+                      <li class="menu-4216 menu-path-node-92 first  odd  last "><a href="http://www.network-box.com.hk/zh-hant/spam-block" title="">三重防垃圾郵件</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-4117 menuparent menu-path-node-473 odd "><a href="http://www.network-box.com.hk/zh-hant/s-scan" title="">S-Scan</a>
+                    <ul style="visibility: hidden; display: none;">
+                      <li class="menu-4213 menu-path-node-473 first  odd  last "><a href="http://www.network-box.com.hk/zh-hant/s-scan" title="內容過濾">內容過濾</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-4230 menuparent menu-path-node-477 even last "><a href="http://www.network-box.com.hk/zh-hant/ui_real-timemonitoring" title="">附加功能</a>
+                    <ul style="visibility: hidden; display: none;">
+                      <li class="menu-4232 menu-path-node-477 first  odd "><a href="http://www.network-box.com.hk/zh-hant/ui_real-timemonitoring" title="">圖像用戶界面 / 實時監控</a></li>
+                      <li class="menu-2640 menu-path-node-120 even "><a href="http://www.network-box.com.hk/zh-hant/mail-portal" title="">電郵報告</a></li>
+                      <li class="menu-1990 menu-path-node-122 odd "><a href="http://www.network-box.com.hk/zh-hant/box-office" title="">Box Office 管理系統</a></li>
+                      <li class="menu-4627 menuparent menu-path-node-123 even "><a href="http://www.network-box.com.hk/zh-hant/iphone-app" title="">iPhone/ iPad HD管理應用程式</a>
+                        <ul style="visibility: hidden; display: none;">
+                          <li class="menu-1991 menu-path-node-123 first  odd "><a href="http://www.network-box.com.hk/zh-hant/iphone-app" title="">iPhone</a></li>
+                          <li class="menu-2603 menu-path-node-304 even  last "><a href="http://www.network-box.com.hk/zh-hant/ipad-app" title="">iPad HD</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-1989 menu-path-node-121 odd  last "><a href="http://www.network-box.com.hk/zh-hant/periodic-portal" title="">Adobe PDF格式定期報告</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-4147 menuparent menu-path-node-450 even "><a href="http://www.network-box.com.hk/zh-hant/waf-scan" title="">Anti-DDoS WAF+</a>
+                <ul style="visibility: hidden; display: none;">
+                  <li class="menu-4148 menuparent menu-path-node-450 first odd "><a href="http://www.network-box.com.hk/zh-hant/waf-scan" title="">WAF-Scan</a>
+                    <ul style="visibility: hidden; display: none;">
+                      <li class="menu-4223 menu-path-node-450 first  odd "><a href="http://www.network-box.com.hk/zh-hant/waf-scan" title="waf-scan 概覽">概覽</a></li>
+                      <li class="menu-4219 menu-path-node-474 even "><a href="http://www.network-box.com.hk/zh-hant/anti-ddos" title="">Anti-DDoS</a></li>
+                      <li class="menu-4225 menu-path-node-475 odd "><a href="http://www.network-box.com.hk/zh-hant/waf" title="">Web應用程式防火牆</a></li>
+                      <li class="menu-4227 menu-path-node-476 even  last "><a href="http://www.network-box.com.hk/zh-hant/IPv4-IPv6Bridging" title="">IPv4 至 IPv6 / IPv6 至 IPv4 銜接</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-4633 menuparent menu-path-node-477 even last "><a href="http://www.network-box.com.hk/zh-hant/ui_real-timemonitoring" title="">附加功能</a>
+                    <ul style="visibility: hidden; display: none;">
+                      <li class="menu-4634 menu-path-node-477 first  odd "><a href="http://www.network-box.com.hk/zh-hant/ui_real-timemonitoring" title="">圖像用戶界面 / 實時監控</a></li>
+                      <li class="menu-4635 menu-path-node-122 even "><a href="http://www.network-box.com.hk/zh-hant/box-office" title="">Box Office 管理系統</a></li>
+                      <li class="menu-4636 menu-path-node-121 odd  last "><a href="http://www.network-box.com.hk/zh-hant/periodic-portal" title="">Adobe PDF格式定期報告</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-1937 menuparent menu-path-node-101 odd last "><a href="http://www.network-box.com.hk/zh-hant/industries" title="">行業</a>
+                <ul style="visibility: hidden; display: none;">
+                  <li class="menu-2159 menu-path-node-100 first  odd "><a href="http://www.network-box.com.hk/zh-hant/banking-financial" title="">銀行及金融業</a></li>
+                  <li class="menu-2160 menu-path-node-102 even "><a href="http://www.network-box.com.hk/zh-hant/government" title="">政府部門</a></li>
+                  <li class="menu-2161 menu-path-node-103 odd "><a href="http://www.network-box.com.hk/zh-hant/educational" title="">教育機構</a></li>
+                  <li class="menu-2162 menu-path-node-104 even "><a href="http://www.network-box.com.hk/zh-hant/small-medium-business" title="">中小企</a></li>
+                  <li class="menu-2163 menu-path-node-105 odd "><a href="http://www.network-box.com.hk/zh-hant/logistics" title="">物流業</a></li>
+                  <li class="menu-2164 menu-path-node-106 even "><a href="http://www.network-box.com.hk/zh-hant/hospitality" title="">旅遊及酒店業</a></li>
+                  <li class="menu-2165 menu-path-node-107 odd "><a href="http://www.network-box.com.hk/zh-hant/manufacturing" title="">製造業</a></li>
+                  <li class="menu-2166 menu-path-node-108 even  last "><a href="http://www.network-box.com.hk/zh-hant/enterprise" title="">企業</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-1938 menuparent menu-path-node-111 even "><a href="http://www.network-box.com.hk/zh-hant/service" title="">服務</a>
+            <ul style="visibility: hidden; display: none;">
+              <li class="menu-1939 menuparent menu-path-node-111 first odd "><a href="http://www.network-box.com.hk/zh-hant/service" title="">管理服務</a>
+                <ul style="visibility: hidden; display: none;">
+                  <li class="menu-1982 menu-path-node-112 first  odd "><a href="http://www.network-box.com.hk/zh-hant/internet-security" title="">網路保安</a></li>
+                  <li class="menu-1983 menu-path-node-113 even "><a href="http://www.network-box.com.hk/zh-hant/monitoring-service" title="">監控服務</a></li>
+                  <li class="menu-1984 menu-path-node-116 odd "><a href="http://www.network-box.com.hk/zh-hant/threat-analysis" title="">威脅分析</a></li>
+                  <li class="menu-1985 menu-path-node-117 even "><a href="http://www.network-box.com.hk/zh-hant/compliance" title="">承諾</a></li>
+                  <li class="menu-1986 menu-path-node-118 odd  last "><a href="http://www.network-box.com.hk/zh-hant/global-intelligence" title="">環球智慧</a></li>
+                </ul>
+              </li>
+              <li class="menu-1919 menu-path-node-84 even "><a href="http://www.network-box.com.hk/zh-hant/push-technology" title="">Push 技術</a></li>
+              <li class="menu-1987 menu-path-node-119 odd "><a href="http://www.network-box.com.hk/zh-hant/my-network-box-com" title="">MY.NETWORK-BOX.COM</a></li>
+              <li class="menu-1941 menu-path-node-115 even  last "><a href="http://www.network-box.com.hk/zh-hant/valued-added-services" title="">增值服務</a></li>
+            </ul>
+          </li>
+          <li class="menu-1942 menuparent menu-path-node-124 odd "><a href="http://www.network-box.com.hk/zh-hant/product" title="">產品</a>
+            <ul style="visibility: hidden; display: none;">
+              <li class="menu-1947 menu-path-node-493 first  odd "><a href="http://www.network-box.com.hk/zh-hant/nb5-overview" title="">概覽</a></li>
+              <li class="menu-1948 menu-path-node-490 even "><a href="http://www.network-box.com.hk/zh-hant/nb5-sseries" title="">S-系列</a></li>
+              <li class="menu-1949 menu-path-node-491 odd "><a href="http://www.network-box.com.hk/zh-hant/nb5-mseries" title="">M-系列</a></li>
+              <li class="menu-1950 menu-path-node-492 even  last "><a href="http://www.network-box.com.hk/zh-hant/nb5-eseries" title="">E-系列</a></li>
+            </ul>
+          </li>
+          <li class="menu-1943 menuparent menu-path-node-139 even "><a href="http://www.network-box.com.hk/zh-hant/buy" title="">如何購買</a>
+            <ul style="visibility: hidden; display: none;">
+              <li class="menu-1951 menu-path-node-139 first  odd "><a href="http://www.network-box.com.hk/zh-hant/buy" title="">銷售聯絡</a></li>
+              <li class="menu-2774 menu-path-node-231 even  last "><a href="http://www.network-box.com.hk/zh-hant/eq" title="">查詢表格</a></li>
+            </ul>
+          </li>
+          <li class="menu-1944 menuparent menu-path-node-140 odd "><a href="http://www.network-box.com.hk/zh-hant/support" title="">支援</a>
+            <ul style="visibility: hidden; display: none;">
+              <li class="menu-1952 menu-path-node-140 first  odd "><a href="http://www.network-box.com.hk/zh-hant/support" title="">MAPP</a></li>
+              <li class="menu-4647 menu-path-node-500 even "><a href="http://www.network-box.com.hk/zh-hant/companybrochures" title="Company Brochures">公司小冊子</a></li>
+              <li class="menu-2761 menu-path-node-320 odd "><a href="http://www.network-box.com.hk/zh-hant/whitepaper" title="">白皮書</a></li>
+              <li class="menu-1955 menu-path-node-143 even "><a href="http://www.network-box.com.hk/zh-hant/technical-document" title="">技術文件</a></li>
+              <li class="menu-4086 menu-path-node-397 odd "><a href="http://www.network-box.com.hk/zh-hant/SLA_Documents" title="">服務級別協議文件</a></li>
+              <li class="menu-4105 menu-path-node-408 even "><a href="http://www.network-box.com.hk/zh-hant/node/408" title="">政策指引</a></li>
+              <li class="menu-1957 menu-path-node-145 odd "><a href="http://www.network-box.com.hk/zh-hant/training-certification" title="">培訓與證書課程</a></li>
+              <li class="menu-1958 menu-path-node-242 even "><a href="http://www.network-box.com.hk/zh-hant/faqs-c" title="">常見問題</a></li>
+              <li class="menu-1959 menu-path-node-147 odd  last "><a href="http://www.network-box.com.hk/zh-hant/contact-support" title="">服務支援聯絡</a></li>
+            </ul>
+          </li>
+          <li class="menu-1945 menuparent menu-path-node-236 even "><a href="http://www.network-box.com.hk/zh-hant/recentannouncement" title="">新聞中心</a>
+            <ul style="visibility: hidden; display: none;">
+              <li class="menu-1960 menu-path-node-236 first  odd "><a href="http://www.network-box.com.hk/zh-hant/recentannouncement" title="">最新公告</a></li>
+              <li class="menu-4135 menu-path-node-439 even "><a href="http://www.network-box.com.hk/zh-hant/node/439" title="">Network Box IPv6</a></li>
+              <li class="menu-4131 menuparent menu-path-node-421 odd "><a href="http://www.network-box.com.hk/zh-hant/nbrs5" title="">Network Box Version 5</a>
+                <ul style="visibility: hidden; display: none;">
+                  <li class="menu-4660 menu-path-node-421 first  odd "><a href="http://www.network-box.com.hk/zh-hant/nbrs5" title="">概覽</a></li>
+                  <li class="menu-4661 menu-path-network-boxcom-networkbox5- even  last "><a href="http://www.network-box.com/networkbox5/" title="">Network Box 5 網站</a></li>
+                </ul>
+              </li>
+              <li class="menu-1967 menu-path-node-240 even "><a href="http://www.network-box.com.hk/zh-hant/newsletter-detail" title="">業務通訊</a></li>
+              <li class="menu-4198 menu-path-node-508 odd "><a href="http://www.network-box.com.hk/zh-hant/node/508" title="">Network Box Focus</a></li>
+              <li class="menu-2532 menu-path-node-61 even "><a href="http://www.network-box.com.hk/zh-hant/press-release" title="">新聞稿</a></li>
+              <li class="menu-4127 menuparent menu-path-node-407 odd "><a href="http://www.network-box.com.hk/zh-hant/node/407" title="">報告</a>
+                <ul style="visibility: hidden; display: none;">
+                  <li class="menu-4102 menu-path-node-471 first  odd "><a href="http://www.network-box.com.hk/zh-hant/tolly_nb_malware_report_2011" title="">測試報告</a></li>
+                  <li class="menu-4122 menu-path-node-420 even  last "><a href="http://www.network-box.com.hk/zh-hant/frost_sullivan_report" title="">分析報告</a></li>
+                </ul>
+              </li>
+              <li class="menu-2553 menu-path-node-253 even "><a href="http://www.network-box.com.hk/zh-hant/media_coverage" title="">媒體報導</a></li>
+              <li class="menu-3466 menu-path-node-365 odd "><a href="http://www.network-box.com.hk/zh-hant/video_coverage" title="">視頻資訊</a></li>
+              <li class="menu-2551 menu-path-node-255 even "><a href="http://www.network-box.com.hk/zh-hant/blog_page" title="">部落格</a></li>
+              <li class="menu-2554 menu-path-node-258 odd "><a href="http://www.network-box.com.hk/zh-hant/events-details" title="">活動</a></li>
+              <li class="menu-1966 menu-path-node-66 even "><a href="http://www.network-box.com.hk/zh-hant/media-contact" title="">媒體聯絡</a></li>
+              <li class="menu-1956 menu-path-node-144 odd  last "><a href="http://www.network-box.com.hk/zh-hant/visual-collaterals" title="">圖像庫</a></li>
+            </ul>
+          </li>
+          <li class="menu-1946 menuparent menu-path-node-148 odd last "><a href="http://www.network-box.com.hk/zh-hant/about" title="">關於我們</a>
+            <ul style="visibility: hidden; display: none;">
+              <li class="menu-1969 menuparent menu-path-node-149 first odd "><a href="http://www.network-box.com.hk/zh-hant/our-advantage" title="">我們的優勢</a>
+                <ul style="visibility: hidden; display: none;">
+                  <li class="menu-2549 menu-path-node-257 first  odd "><a href="http://www.network-box.com.hk/zh-hant/award" title="">獎項</a></li>
+                  <li class="menu-1962 menu-path-node-238 even  last "><a href="http://www.network-box.com.hk/zh-hant/casestudies" title="">個案研究</a></li>
+                </ul>
+              </li>
+              <li class="menu-1968 menu-path-node-148 even "><a href="http://www.network-box.com.hk/zh-hant/about" title="">管理團隊</a></li>
+              <li class="menu-1970 menu-path-node-150 odd "><a href="http://www.network-box.com.hk/zh-hant/partners" title="">技術合作夥伴</a></li>
+              <li class="menu-1971 menu-path-node-151 even "><a href="http://www.network-box.com.hk/zh-hant/career-opportunities" title="">就業機會</a></li>
+              <li class="menu-1972 menuparent menu-path-node-152 odd "><a href="http://www.network-box.com.hk/zh-hant/worldwide-offices" title="">全球辦事處</a>
+                <ul style="visibility: hidden; display: none;">
+                  <li class="menu-4655 menu-path-node-503 first  odd "><a href="http://www.network-box.com.hk/zh-hant/australasia" title="">澳大拉西亞</a></li>
+                  <li class="menu-2483 menu-path-node-209 even "><a href="http://www.network-box.com.hk/zh-hant/china" title="">中國</a></li>
+                  <li class="menu-4639 menu-path-node-496 odd "><a href="http://www.network-box.com.hk/zh-hant/germany" title="">德國</a></li>
+                  <li class="menu-2484 menu-path-node-210 even "><a href="http://www.network-box.com.hk/zh-hant/hongkong" title="">香港</a></li>
+                  <li class="menu-2485 menu-path-node-211 odd "><a href="http://www.network-box.com.hk/zh-hant/indonesia" title="">印尼</a></li>
+                  <li class="menu-2486 menu-path-node-212 even "><a href="http://www.network-box.com.hk/zh-hant/ireland" title="">愛爾蘭</a></li>
+                  <li class="menu-2487 menu-path-node-213 odd "><a href="http://www.network-box.com.hk/zh-hant/japan" title="">日本</a></li>
+                  <li class="menu-2489 menu-path-node-215 even "><a href="http://www.network-box.com.hk/zh-hant/macau" title="">澳門</a></li>
+                  <li class="menu-2490 menu-path-node-216 odd "><a href="http://www.network-box.com.hk/zh-hant/malaysia" title="">馬來西亞</a></li>
+                  <li class="menu-2498 menu-path-node-220 even "><a href="http://www.network-box.com.hk/zh-hant/taiwan" title="">台灣</a></li>
+                  <li class="menu-2499 menu-path-node-221 odd "><a href="http://www.network-box.com.hk/zh-hant/thailand" title="">泰國</a></li>
+                  <li class="menu-4240 menu-path-node-479 even "><a href="http://www.network-box.com.hk/zh-hant/middleeast" title="">中東</a></li>
+                  <li class="menu-2500 menu-path-node-222 odd "><a href="http://www.network-box.com.hk/zh-hant/unitedkingdom" title="">英國</a></li>
+                  <li class="menu-2501 menu-path-node-223 even  last "><a href="http://www.network-box.com.hk/zh-hant/usa" title="">美國</a></li>
+                </ul>
+              </li>
+              <li class="menu-1973 menu-path-node-153 even  last "><a href="http://www.network-box.com.hk/zh-hant/contact-network-box" title="">聯絡我們</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="banner"> <a href="http://www.network-box.com.hk/network-box-53"><img src="images/frontpage-banner.jpg" width="906" height="198" border="0" alt="Network Box 5.3 Launch"></a> </div>
+  <div id="middle"></div>
+  <div id="index-content">
+    <div id="index-left">
+      <div id="block-block-13" class="clear-block block block-block">
+        <div class="content">
+          <p> <a href="http://www.network-box.com.hk/zh-hant/Triple_ISO_Certification"><img alt="" src="images/iso_home_banner2012.jpg" style="width: 210px; height: 54px;"></a><a href="http://www.network-box.com.hk/zh-hant/award"><img alt="" src="images/CIO_Review_2016-awardBanner-01.jpg" style="width: 210px; height: 52px;"> </a> <a href="http://response.network-box.com/internet-health" target="_new"><img alt="" src="images/Internet-Threat.gif" style="width: 210px; height: 109px;"></a></p>
+          <table border="1" style="width: 210px; height: 30px;">
+            <tbody>
+              <tr>
+                <td valign="middle"><img alt="" src="images/followus.jpg" style="height: 17px;"> <a href="http://www.facebook.com/networkboxresponse"><img alt="" src="images/Network-box_facebook.png" style="height: 19px;"></a><a href="http://www.linkedin.com/company/1654849?trk=NUS_DIG_CMPY-fol"><img alt="" src="images/Network-box_linkedin.png" style="height: 19px;"></a><a href="http://twitter.com/networkbox"><img alt="" src="images/Network-box_twitter.png" style="height: 19px;"></a><a href="http://www.youtube.com/NetworkBox"><img alt="" src="images/YouTube.png" style="height: 19px;"></a><a href="http://www.network-box.com.hk/press-rss"><img alt="" src="images/Network-box_RSS.png" style="height: 19px;"></a><span style="font-size: 11px;"><a href="mailto:nbhk@network-box.com"><img alt="" src="images/Network-box_mail.png" style="height: 19px;"></a></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="index-middle">
+      <div class="panel-display panel-1col clear-block">
+        <div class="panel-panel panel-col">
+          <div>
+            <div class="panel-pane pane-views pane-newsletter" id="index-newletter">
+              <div class="pane-content">
+                <div class="view view-newsletter view-id-newsletter view-display-id-default view-dom-id-1">
+                  <div class="view-content">
+                    <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+                      <div class="views-field-title"> <span class="field-content"><a href="http://www.network-box.com.hk/zh-hant/front_newsletter">2017年2月份 - In the Boxing Ring</a></span> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-region-separator"></div>
+            <div class="panel-pane pane-views pane-news-pic index-news">
+              <h2 class="pane-title">Certification</h2>
+              <div class="pane-content">
+                <div class="view view-news-pic view-id-news_pic view-display-id-default index-news-bg view-dom-id-2">
+                  <div class="view-content">
+                    <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+                      <div class="views-field-body">
+                        <div class="field-content">
+                          <p class="rtecenter"> <a href="http://www.network-box.com.hk/zh-hant/tolly_nb_malware_report_2011"><img alt="" src="images/Tolly_IPv6.gif" style="width: 138px; height: 173px;"></a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="more-link"> <a href="http://www.network-box.com.hk/zh-hant/tolly_nb_malware_report_2011">more</a> </div>
+            </div>
+            <div class="panel-region-separator"></div>
+            <div class="panel-pane pane-views pane-events-pic index-news">
+              <h2 class="pane-title">News</h2>
+              <div class="pane-content">
+                <div class="view view-events-pic view-id-events_pic view-display-id-default index-news-bg view-dom-id-3">
+                  <div class="view-content">
+                    <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+                      <div class="views-field-body">
+                        <div class="field-content">
+                          <p> <a href="http://www.network-box.com.hk/zh-hant/events-details"> <img alt="" src="images/NetworkBox-5_3.png" style="width: 150px; height: 34px;"></a></p>
+                          <p>&nbsp; </p>
+                          <p> Network Box 宣佈正式推出網絡安全管理平台Network Box 5.3。</p>
+                          <p> 是次發佈會於香港麗思卡爾頓酒店102樓的米芝蓮星級餐廳Tosca舉行，邀請眾多客戶和合作夥伴參加歷史性的揭幕儀式。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="more-link"> <a href="http://www.network-box.com.hk/zh-hant/events-details">more</a> </div>
+            </div>
+            <div class="panel-region-separator"></div>
+            <div class="panel-pane pane-views pane-case-studies index-news">
+              <h2 class="pane-title">Case Studies</h2>
+              <div class="pane-content">
+                <div class="view view-case-studies view-id-case_studies view-display-id-default index-news-bg view-dom-id-4">
+                  <div class="view-content">
+                    <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+                      <div class="views-field-body">
+                        <div class="field-content">
+                          <p> <span style="font-size: 13px;"><a href="http://www.network-box.com.hk/casestudies"><img alt="" src="images/Nicholas_Bears_LOGO.JPG" style="width: 150px; height: 31px;"><strong>&nbsp;&nbsp; Nicholas &amp; Bears</strong></a><span style="font-size: 12px;"><a href="http://www.network-box.com.hk/casestudies"><img src="images/Nicholas_and_Bears-Elaine.jpg" style="width: 135px; height: 124px;"></a></span>...</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="more-link"> <a href="http://www.network-box.com.hk/zh-hant/casestudies">more</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="index-right">
+      <div id="block-block-4" class="clear-block block block-block">
+        <div class="content">
+          <div id="alert">
+            <div id="alertlevel"><img width="168" height="279" src="images/condition3.png"><br>
+            </div>
+            <div id="alertdescription" style="width: 136px; height: 56px; overflow: hidden;">
+              <div style="position: absolute; top: 56px; left: 0px; display: none; z-index: 3; opacity: 1; width: 136px; height: 56px;">Serious virus/worm activity or unexploited vulnerabilities without public exploit code</div>
+              <div style="position: absolute; top:px; left: 0px; display: block; z-index: 4; opacity: 1; width: 116px; height: 28px;">Total threats blocked:<br>
+                20,391,928,750</div>
+              <div style="position: absolute; top: 56px; left: 0px; display: none; z-index: 3; opacity: 1; width: 117px; height: 28px;">Total events handled:<br>
+                105,901,104,655</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br class="clear">
+  <div id="copyright">
+    <div id="footer-nav">
+      <div id="block-menu-menu-footer" class="clear-block block block-menu">
+        <div class="content">
+          <ul class="menu">
+            <li class="leaf first"><a href="http://www.network-box.com.hk/zh-hant/sitemap" title="">Site Map</a></li>
+            <li class="leaf last"><a href="http://www.network-box.com.hk/zh-hant/terms-conditions" title="">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p> &nbsp;Copyright © 2017 Network Box Corporation Ltd. All Rights Reserved.</p>
+  </div>
+  <br class="clear">
+</div>
+
+<!-- /layout --> 
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-3456327-6"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<div id="qb-sougou-search" style="display: none; opacity: 0;">
+  <p>搜索</p>
+  <p class="last-btn">复制</p>
+  <iframe src="images/saved_resource.html"></iframe>
+</div>
+<div style="height:1000px;"></div>
+<div class="float_layer" id="miaov_float_layer">
+  <h2> <strong>视频播放</strong> <a id="btn_min" href="javascript:;" class="min"></a> <a id="btn_close" href="javascript:;" class="close"></a> </h2>
+  <div class="content">
+    <div class="wrap">
+      <object type="application/x-shockwave-flash" data="Network Box Overview 中文字幕0321.swf" width="330" height="240" plugspace="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" id="Network Box Overview 中文字幕0321">
+        <param name="movie" value="Network Box Overview 中文字幕0321.swf" />
+        <param name="allowFullScreen" value="true" />
+        <embed width="330px" height="240px" src="Network Box Overview 中文字幕0321.swf" quality="autohigh" wmode="transparent"
+					type="application/x-shockwave-flash" allowfullscreen="true" plugspace="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></embed>
+      </object>
+    </div>
+  </div>
+</div>
+</body>
+</html>
